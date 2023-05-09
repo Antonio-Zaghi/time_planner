@@ -82,7 +82,7 @@ class _TimePlannerState extends State<TimePlanner> {
   }
 
   /// store input data to static values
-  void _initData() {
+  void initData() {
     _checkInputValue();
     _convertToLocalStyle();
     config.horizontalTaskPadding = style.horizontalTaskPadding;
@@ -99,7 +99,7 @@ class _TimePlannerState extends State<TimePlanner> {
 
   @override
   void initState() {
-    _initData();
+    initData();
     super.initState();
     Future.delayed(Duration.zero).then((_) {
       int hour = DateTime.now().hour;
